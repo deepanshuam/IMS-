@@ -1,4 +1,3 @@
-
 package com.inventory.config;
 
 import com.inventory.service.JwtService;
@@ -31,6 +30,15 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
             HttpServletResponse response,
             FilterChain filterChain)
             throws ServletException, IOException {
+
+        String path = request.getServletPath();
+
+        // Login and registration do not require a JWT.
+        if ("/api/auth/login".equals(path)
+                || "/api/auth/register".equals(path)) {
+            filterChain.doFilter(request, response);
+            return;
+        }
 
         String header = request.getHeader("Authorization");
 
