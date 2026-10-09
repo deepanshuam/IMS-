@@ -13,7 +13,6 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/auth")
-@CrossOrigin(origins = "http://localhost:5173")
 public class AuthController {
 
     private final AuthService authService;
@@ -79,8 +78,13 @@ public class AuthController {
         User user = authService.login(username, password);
 
         if (user == null) {
-            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(
-                    Map.of("message", "Invalid username or password.")
+            return ResponseEntity.status(
+                    HttpStatus.UNAUTHORIZED
+            ).body(
+                    Map.of(
+                            "message",
+                            "Invalid username or password."
+                    )
             );
         }
 
