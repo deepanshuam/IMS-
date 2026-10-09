@@ -1,0 +1,22 @@
+
+# Frontend dependencies and build output
+frontend/node_modules/
+frontend/dist/
+
+# Backend build output
+backend/target/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+backend/.env
+backend/.env.*
+
+# IDE and operating system files
+.DS_Store
+.vscode/
+.idea/
+
+# Local application configuration containing secrets
+backend/src/main/resources/application-local.properties
