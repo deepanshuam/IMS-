@@ -24,7 +24,7 @@ function Sidebar() {
     return (
         <aside className="sidebar">
             <div className="sidebar-logo">
-                <h2>IMS</h2>
+                <h2>Inventory Managment System</h2>
                 <p>Inventory System</p>
             </div>
 

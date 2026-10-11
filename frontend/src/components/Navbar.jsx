@@ -12,7 +12,7 @@ function Navbar() {
                 </div>
 
                 <div>
-                    <strong>Admin</strong>
+                    <strong>Alice Verma</strong>
                     <span>Administrator</span>
                 </div>
             </div>
